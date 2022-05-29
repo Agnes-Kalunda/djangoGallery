@@ -1,8 +1,6 @@
 from django.db import models
-
 from cloudinary.models import CloudinaryField
 # Create your models here.
-
 class Category(models.Model):
     name = models.CharField(max_length=50)
     def __str__(self):
@@ -26,13 +24,11 @@ class Location(models.Model):
         self.save()
     def delete_location(self):
         self.delete()
-
-
 class Image(models.Model):
 
     image = CloudinaryField('image')
 
-    image = models.ImageField(upload_to='images/')
+    # image = models.ImageField(upload_to='images/')
     name = models.CharField(max_length=70)
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
