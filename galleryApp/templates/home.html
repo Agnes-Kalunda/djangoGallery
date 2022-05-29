@@ -1,6 +1,4 @@
 {%extends "base.html"%}
-
-
 {%block content%}
 <!DOCTYPE html>
 <html lang="en">
@@ -18,22 +16,19 @@
     {% else %}
       <h2> Found 0 posts for the search term {{message}}</h2>
     {% endif %}
-
     </div>
   <h1 class="text-center">ART GALLERY</h1><br>
-
     {% for post in posts %}
-
+    
 
     {% empty %}
     <div class="row">
-      <h2 class="text-center">There No Search Scienfic Facts Posts</h2>
+      <h2 class="text-center">No Search found</h2>
     </div>
 
 
     {% endfor %}
-
-
+    
 </div>
 </body>
 </html>
